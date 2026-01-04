@@ -1,0 +1,412 @@
+.login-container {
+  height: 100dvh; /* Use dynamic viewport height */
+  background: linear-gradient(135deg, #fff4e6, #ffeadb);
+  padding: 20px; /* Reduce vertical padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background-color: #ffffffcc;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(10px);
+}
+
+.login-box h2 {
+  text-align: center;
+  color: #d97706;
+  margin-bottom: 24px;
+  font-size: 26px;
+}
+
+.login-box input {
+  width: 100%; /* ✅ Matches the button width */
+  box-sizing: border-box; /* Ensures padding doesn't overflow */
+  padding: 12px 16px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border 0.3s ease;
+}
+
+.login-box input:focus {
+  border-color: #ffa726;
+  outline: none;
+}
+
+.login-button {
+  width: 100%;
+  background-color: #ffa726;
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  margin-top: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.login-button:hover {
+  background-color: #fb8c00;
+  transform: scale(1.03);
+}
+
+.login-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.login-button:disabled:hover {
+  background-color: #ccc;
+  transform: none;
+}
+
+.login-footer {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.login-footer a {
+  color: #d97706;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}
+
+.password-input-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  padding: 12px 44px 12px 16px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.toggle-password {
+  position: absolute;
+  padding-top: 20px;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #999;
+}
+
+.toggle-password:hover {
+  color: #d97706;
+}
+
+/* Hide default browser icons */
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+input::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+}
+
+/* Forgot Password Styles */
+.forgot-password-link {
+  text-align: right;
+  margin: 10px 0;
+}
+
+.forgot-password-link a {
+  color: #d97706;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot-password-link a:hover {
+  text-decoration: underline;
+}
+
+.forgot-password-info {
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.forgot-password-actions {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.back-to-login {
+  background: none;
+  border: none;
+  color: #d97706;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+  padding: 5px 10px;
+}
+
+.back-to-login:hover {
+  color: #b45309;
+}
+
+.success-message {
+  background-color: #d1fae5;
+  color: #065f46;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 15px 0;
+  text-align: center;
+  border: 1px solid #a7f3d0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.error-message {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 15px 0;
+  text-align: center;
+  border: 1px solid #fecaca;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* OTP Input Styles */
+.otp-input {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.otp-input::placeholder {
+  letter-spacing: normal;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/* Password strength indicator */
+.password-strength {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Loading animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 15px;
+  }
+  
+  .login-box {
+    padding: 25px 20px;
+    margin: 10px;
+  }
+  
+  .login-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .login-box input {
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+  
+  .login-button {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+/* Focus styles for accessibility */
+.login-box input:focus-visible {
+  outline: 2px solid #ffa726;
+  outline-offset: 2px;
+}
+
+.back-to-login:focus-visible {
+  outline: 2px solid #d97706;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Smooth transitions for all interactive elements */
+.login-box input,
+.login-button,
+.back-to-login,
+.toggle-password {
+  transition: all 0.3s ease;
+}
+
+/* Enhanced password wrapper styling */
+.password-input-wrapper:focus-within {
+  transform: translateY(-1px);
+}
+
+.password-input-wrapper:focus-within input {
+  border-color: #ffa726;
+  box-shadow: 0 0 0 2px rgba(255, 167, 38, 0.1);
+}
+
+/* deepseek */
+/* Progress Steps */
+.progress-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.progress-steps::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: #e5e7eb;
+  z-index: 1;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+
+.step-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.step.active .step-number {
+  background: #ffa726;
+  color: white;
+}
+
+.step span {
+  font-size: 12px;
+  color: #6b7280;
+  text-align: center;
+}
+
+.step.active span {
+  color: #ffa726;
+  font-weight: 500;
+}
+
+/* OTP Input */
+.otp-input {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 8px;
+  font-family: 'Courier New', monospace;
+}
+
+.otp-input::placeholder {
+  letter-spacing: normal;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: inherit;
+}
+
+/* Resend OTP */
+.resend-otp {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.resend-link {
+  color: #d97706;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.resend-link:hover {
+  color: #b45309;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Enhanced focus states */
+.otp-input:focus {
+  border-color: #ffa726;
+  box-shadow: 0 0 0 3px rgba(255, 167, 38, 0.1);
+  outline: none;
+}

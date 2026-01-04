@@ -1,0 +1,16 @@
+/* styles/ModeToggle.css */
+.mode-toggle {
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--icon-color);
+    z-index: 1001;
+    transition: transform 0.3s ease;
+  }
+  
+  .mode-toggle:hover {
+    transform: scale(1.15);
+  }
+  

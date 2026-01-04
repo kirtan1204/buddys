@@ -1,0 +1,109 @@
+.user-profile-container {
+    max-width: 500px;
+    margin: 80px auto;
+    background-color: #fff4e0;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .user-profile-container h2 {
+    color: #d97706;
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+  
+  .user-profile-container p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+    text-align: left;
+  }
+  
+  .change-password-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d97706;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .change-password-btn:hover {
+    background-color: #e67e00;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .user-profile-container {
+      margin: 40px 16px;
+      padding: 20px;
+    }
+  
+    .user-profile-container h2 {
+      font-size: 22px;
+    }
+  
+    .change-password-btn {
+      width: 100%;
+    }
+  }
+
+  .user-icon {
+    font-size: 60px;
+    color: #d97706;
+    margin-bottom: 10px;
+  }
+
+  /* new css */
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .upload-controls {
+    margin-bottom: 15px;
+  }
+  
+  .upload-btn, .remove-btn {
+    display: inline-block;
+    margin: 4px 8px;
+    padding: 8px 14px;
+    background-color: #3cd5ff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upload-btn:hover, .remove-btn:hover {
+    background-color: #e67e00;
+  }
+  
+/* change password button to line */
+.change-password-text {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #444;
+}
+
+.change-password-text span {
+  color: #d97706;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 2px;
+  font-weight: 500;
+}
+
+.change-password-text span:hover {
+  color: #e67e00;
+}
